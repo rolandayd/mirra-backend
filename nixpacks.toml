@@ -1,16 +1,5 @@
 [phases.setup]
-nixPkgs = [
-  "chromium",
-  "nss",
-  "freetype",
-  "freetype-dev",
-  "harfbuzz",
-  "ca-certificates",
-  "ttf-freefont",
-  "nodejs_18",
-  "yarn"
-]
+nixPkgs = ["nodejs_18"]
 
-[variables]
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium-browser"
+[start]
+cmd = "node server.js"
